@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "827863958917",
+    "firebase_url": "https://urdulearningapp-cc61c-default-rtdb.firebaseio.com",
+    "project_id": "urdulearningapp-cc61c",
+    "storage_bucket": "urdulearningapp-cc61c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:827863958917:android:44bb3075b1927a658a30ec",
+        "android_client_info": {
+          "package_name": "com.example.notesassignmentMateen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "827863958917-i5pamm5023u3aeriokf4nre2qmk7k3ol.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-kpskGr-WXMF7w4I9CmvqZCbykYZZ4Fc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "827863958917-i5pamm5023u3aeriokf4nre2qmk7k3ol.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:827863958917:android:8af40f8bd5149f3c8a30ec",
+        "android_client_info": {
+          "package_name": "com.example.urdu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "827863958917-i5pamm5023u3aeriokf4nre2qmk7k3ol.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-kpskGr-WXMF7w4I9CmvqZCbykYZZ4Fc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "827863958917-i5pamm5023u3aeriokf4nre2qmk7k3ol.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:827863958917:android:537d82d80fed1c488a30ec",
+        "android_client_info": {
+          "package_name": "com.example.urdulearningappproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "827863958917-i5pamm5023u3aeriokf4nre2qmk7k3ol.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-kpskGr-WXMF7w4I9CmvqZCbykYZZ4Fc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "827863958917-i5pamm5023u3aeriokf4nre2qmk7k3ol.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
