@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -18,9 +19,12 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -81,6 +85,23 @@ public class register extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful())
                         {
+
+                            MediaPlayer mediaPlayer = new MediaPlayer();
+                            try {
+                                mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/projectmobdev-53231.appspot.com/o/buttonclick.wav?alt=media&token=cbaea4e0-733e-4e91-8ea7-8b4c2201472e");
+                                mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                                    @Override
+                                    public void onPrepared(MediaPlayer mp) {
+                                        mp.start();
+                                    }
+                                });
+                                mediaPlayer.prepare();
+                            }catch (IOException e)
+                            {
+                                e.printStackTrace();
+                            }
+
+
                             FirebaseUser user= fauth.getCurrentUser();
                             Toast.makeText(register.this, "User Created", Toast.LENGTH_SHORT).show();
                             DocumentReference df = fstore.collection("Users").document(user.getUid());
@@ -91,6 +112,18 @@ public class register extends AppCompatActivity {
 
                             userinfo.put("isUser","1");
                             df.set(userinfo);
+
+                            String uid = user.getUid();
+
+                            FirebaseDatabase database = FirebaseDatabase.getInstance();
+                            DatabaseReference myRef = database.getReference("users").child(uid);
+
+                            DatabaseReference name = myRef.child("name");
+                            name.setValue(mfullname.getText().toString());
+
+                            DatabaseReference email = myRef.child("email");
+                            email.setValue(memail.getText().toString());
+//
 
                             startActivity(new Intent(getApplicationContext(),MainActivity.class));
                             finish();
